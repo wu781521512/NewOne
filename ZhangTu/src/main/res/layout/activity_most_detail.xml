@@ -4,10 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mrwuchao.newone.activity.MostDetailActivity">
 
+    <ScrollView
+        android:id="@+id/most_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/most_detail_main_miaosu"/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:alpha="1"
+        android:background="@color/journey_lv">
+
+        <ImageView
+            android:id="@+id/most_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:id="@+id/most_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="九华山封禁觉得"
+            android:textColor="@color/find_white"
+            android:textSize="26sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/most_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/image_scenicdetail_uploadpic"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="传照片"
+            android:textColor="@color/journey_lv"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/image_scenicdetail_comment"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="传照片"
+            android:textColor="@color/journey_lv"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/image_scenicdetail_addtrip"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="传照片"
+            android:textSize="14sp"
+            android:textColor="@color/journey_lv"
+            android:padding="10dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/qianhui"
+        android:layout_above="@id/most_detail_bottom"/>
 </RelativeLayout>

@@ -46,7 +46,7 @@ import java.util.List;
 public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.MyHolder>{
     Context context;
     List<JourneyItemInfo> itemList;
-    final int MAXTEXT = 110;   //最大文字显示数量
+    final int MAXTEXT = 160;   //最大文字显示数量
     private View view;
 //    List<Bitmap> bitmapList = new ArrayList<>();
 //    LruCache<String,Bitmap> lru = new LruCache<String,Bitmap>((int) (Runtime.getRuntime().maxMemory()/8)) {
@@ -186,6 +186,8 @@ public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.MyHolder
                     //有#  找到字符串  先裁剪后组合成原样
                     int first = stringBuilder.indexOf("#");
                     int last = stringBuilder.lastIndexOf("#");
+                    Log.i("index",itemInfo.getContent());
+                    Log.i("index","第一个出现"+first+"  最后一个出现"+last+"   总长度"+stringBuilder.length());
                     String subString = stringBuilder.substring(first,last+1);
                     SpannableString spanString = new SpannableString(subString);
                     MyClickableSpan myClickableSpan1 = new MyClickableSpan(context);

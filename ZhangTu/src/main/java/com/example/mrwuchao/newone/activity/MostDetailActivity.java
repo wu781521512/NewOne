@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.mrwuchao.newone.R;
 
-public class MostDetailActivity extends AppCompatActivity {
+public class MostDetailActivity extends NotitleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

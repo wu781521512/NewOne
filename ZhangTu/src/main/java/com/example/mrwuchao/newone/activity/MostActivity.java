@@ -103,6 +103,8 @@ public class MostActivity extends NotitleActivity {
     private MostInfo mostInfo;
     List<MostDataInfo> disList = new ArrayList<>();
     private MostAdapter mostAdapter;
+    private MostInfo disMostInfo;
+    private MostAdapter mostAdapter1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -194,6 +196,10 @@ public class MostActivity extends NotitleActivity {
         topSelectJuliText.setTextColor(getResources().getColor(R.color.find_black));
         topSelectJuliView.setVisibility(View.GONE);
 
+        if (mostAdapter == null) {
+            mostAdapter = new MostAdapter(mostInfo,this);
+        }
+        mostRecycler.setAdapter(mostAdapter);
     }
 
     public void toDistance(){
@@ -205,6 +211,10 @@ public class MostActivity extends NotitleActivity {
         middleSelectTopPinView.setVisibility(View.GONE);
         topSelectPinText.setTextColor(getResources().getColor(R.color.find_black));
         topSelectTopPinView.setVisibility(View.GONE);
+        if (mostAdapter1 == null) {
+            mostAdapter1 = new MostAdapter(disMostInfo,this);
+        }
+        mostRecycler.setAdapter(mostAdapter1);
     }
 
     private void shareTip() {
@@ -244,6 +254,8 @@ public class MostActivity extends NotitleActivity {
     private void handleMost(JSONObject jsonObject) {
         JsonUtil jsonUtil = new JsonUtil();
         mostInfo = jsonUtil.decodeMost(jsonObject);
+        disMostInfo = jsonUtil.decodeMost(jsonObject);
+        Collections.reverse(disMostInfo.getMostDataInfoList());
         Log.i("kong", mostInfo + "");
         if (mostInfo != null)
         {

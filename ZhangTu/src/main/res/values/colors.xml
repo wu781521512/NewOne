@@ -15,4 +15,6 @@
     <color name="qinhui">#F5F3F3</color>
     <color name="touming">#00000000</color>
     <color name="mine_black">#000000</color>
+    <color name="text_black">#575B5A</color>
+    <color name="text_blue">#0000ff</color>
 </resources>

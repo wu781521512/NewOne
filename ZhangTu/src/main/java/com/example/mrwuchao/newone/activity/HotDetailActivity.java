@@ -95,13 +95,12 @@ public class HotDetailActivity extends NotitleActivity implements View.OnClickLi
     @BindView(R.id.hot_detail_new_recycler)
     RecyclerView newRecycler;
 
-    @BindView(R.id.hot_detail_hot_recycler)
-    RecyclerView hotRecycler;
-
 
     int currentTag = R.id.hot_detail_zuixin;
     List<JourneyItemInfo> newList = new ArrayList<>();
     List<JourneyItemInfo> hotList = new ArrayList<>();
+    List<JourneyItemInfo> commonList = new ArrayList<>();
+    private JourneyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,8 +175,9 @@ public class HotDetailActivity extends NotitleActivity implements View.OnClickLi
         zuixinView2.setVisibility(View.GONE);
         zuireText2.setTextColor(getResources().getColor(R.color.find_black));
         zuixinView4.setVisibility(View.GONE);
-        newRecycler.setVisibility(View.VISIBLE);
-        hotRecycler.setVisibility(View.GONE);
+        commonList.clear();
+        commonList.addAll(newList);
+        adapter.notifyDataSetChanged();
     }
 
     public void toRe() {
@@ -189,8 +189,9 @@ public class HotDetailActivity extends NotitleActivity implements View.OnClickLi
         zuixinView2.setVisibility(View.VISIBLE);
         zuireText2.setTextColor(getResources().getColor(R.color.journey_lv));
         zuixinView4.setVisibility(View.VISIBLE);
-        newRecycler.setVisibility(View.GONE);
-        hotRecycler.setVisibility(View.VISIBLE);
+        commonList.clear();
+        commonList.addAll(hotList);
+        adapter.notifyDataSetChanged();
     }
 
     class HotHandler extends HandleUtil {
@@ -217,11 +218,6 @@ public class HotDetailActivity extends NotitleActivity implements View.OnClickLi
         JsonUtil jsonUtil = new JsonUtil();
         hotList.clear();
         hotList.addAll(jsonUtil.decodeJourneyItem(jsonObject,"record_list"));
-        MyLinearManager linearManager = new MyLinearManager(this, LinearLayoutManager.VERTICAL,false);
-        hotRecycler.setLayoutManager(linearManager);
-        hotRecycler.addItemDecoration(new MyDecoration(20));
-        JourneyAdapter adapter = new JourneyAdapter(this,hotList);
-        hotRecycler.setAdapter(adapter);
     }
 
     private void handleNew(JSONObject jsonObject) {
@@ -239,10 +235,11 @@ public class HotDetailActivity extends NotitleActivity implements View.OnClickLi
         //现在是清空加入 不能实现加载更多
         newList.clear();
         newList.addAll(jsonUtil.decodeJourneyItem(jsonObject,"record_list"));
+        commonList.addAll(newList);
         MyLinearManager linearManager = new MyLinearManager(this, LinearLayoutManager.VERTICAL,false);
         newRecycler.setLayoutManager(linearManager);
         newRecycler.addItemDecoration(new MyDecoration(20));
-        JourneyAdapter adapter = new JourneyAdapter(this,newList);
+        adapter =  new JourneyAdapter(this,commonList);
         newRecycler.setAdapter(adapter);
     }
 
