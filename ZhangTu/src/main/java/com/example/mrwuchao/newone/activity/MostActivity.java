@@ -142,12 +142,10 @@ public class MostActivity extends NotitleActivity {
                 break;
             case R.id.most_middle_select_pin:
             case R.id.most_top_select_pin:
-                Log.i("dianji","点评被点击");
                 toPin();
                 break;
             case R.id.most_middle_select_juli:
             case R.id.most_top_select_juli:
-                Log.i("dianji","距离被点击");
                 toDistance();
                 break;
             case R.id.most_top_tip_image:
