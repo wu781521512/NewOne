@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            android:id="@+id/find_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/find_image"
+            android:gravity="center"
+            android:text="发现"
+            android:textColor="@color/qianhui"/>
+
+        <RadioButton
+            android:id="@+id/nearby_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/nearby_image"
+            android:gravity="center"
+            android:text="地图"
+            android:textColor="@color/qianhui"/>
+
+        <RadioButton
+            android:id="@+id/journey_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/journey_image"
+            android:gravity="center"
+            android:text="新鲜"
+            android:textColor="@color/qianhui"/>
+
+        <RadioButton
+            android:id="@+id/mine_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/personal_image"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/qianhui"/>
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_radiogroup">
+    </FrameLayout>
+</RelativeLayout>

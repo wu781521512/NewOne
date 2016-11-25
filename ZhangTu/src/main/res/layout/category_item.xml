@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/category_relative">
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:id="@+id/category_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/category_new_image"
+            android:layout_width="48dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="2dp"
+            android:background="@mipmap/bk_new_top"/>
+        <TextView
+            android:id="@+id/category_new_text"
+            android:layout_width="48dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/find_white"
+            android:background="@mipmap/bk_new_bottom"/>
+    </RelativeLayout>
+
+    <com.example.mrwuchao.newone.views.CenterTextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxEms="6"
+        android:textColor="@color/find_white"
+        android:textSize="12sp"/>
+</RelativeLayout>

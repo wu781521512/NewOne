@@ -1,0 +1,328 @@
+package com.example.mrwuchao.newone.utils;
+
+import android.util.Log;
+
+import com.example.mrwuchao.newone.entity.Advertise;
+import com.example.mrwuchao.newone.entity.FindCategoryInfo;
+import com.example.mrwuchao.newone.entity.FindFengXiang;
+import com.example.mrwuchao.newone.entity.FindHotInfo;
+import com.example.mrwuchao.newone.entity.FindJustGoInfo;
+import com.example.mrwuchao.newone.entity.HotDetailTopInfo;
+import com.example.mrwuchao.newone.entity.JourneyItemInfo;
+import com.example.mrwuchao.newone.entity.MostDataInfo;
+import com.example.mrwuchao.newone.entity.MostInfo;
+import com.example.mrwuchao.newone.entity.TagInfo;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+/**
+ * json解析的工具类
+ */
+public class JsonUtil {
+    List<Advertise> advertiseList;
+    List<FindFengXiang> fengList;
+    List<FindHotInfo> hotList;
+    List<FindCategoryInfo> categoryList;
+    List<FindJustGoInfo> justGoList;
+    List<JourneyItemInfo> journeyItemList;
+    public List<Advertise> decodeAdvertise(JSONObject jsonObject) {
+        advertiseList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+             result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray focus = datas.getJSONArray("focus");
+                for (int i = 0; i < focus.length(); i++) {
+                    JSONObject item = focus.getJSONObject(i);
+                    Advertise advertise = new Advertise();
+                    advertise.setFocus_title(item.getString("focus_title"));
+                    advertise.setFocus_img1(item.getString("focus_img1"));
+                    advertise.setFocus_url(item.getString("focus_url"));
+                    advertise.setOpen_type(item.getString("open_type"));
+                    advertiseList.add(advertise);
+                }
+                return advertiseList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<FindFengXiang> decodeFeng(JSONObject jsonObject) {
+        fengList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray fengxiang = datas.getJSONArray("fengxiangbiao");
+                for (int i = 0; i < fengxiang.length(); i++) {
+                    JSONObject item = fengxiang.getJSONObject(i);
+                    FindFengXiang findFeng = new FindFengXiang();
+                    findFeng.setScenic_id(item.getInt("scenic_id"));
+                    findFeng.setScenic_img(item.getString("scenic_img"));
+                    findFeng.setScenic_name(item.getString("scenic_name"));
+                    findFeng.setTop_num(item.getInt("top_num"));
+                    fengList.add(findFeng);
+                }
+                return fengList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<FindHotInfo> decodeHot(JSONObject jsonObject) {
+        hotList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray hot = datas.getJSONArray("huati");
+                for (int i = 0; i < hot.length(); i++) {
+                    JSONObject item = hot.getJSONObject(i);
+                    FindHotInfo hotInfo = new FindHotInfo();
+                    hotInfo.setHuati_id(item.getString("huati_id"));
+                    hotInfo.setHuati_img(item.getString("huati_img"));
+                    hotInfo.setHuati_title(item.getString("huati_title"));
+                    hotList.add(hotInfo);
+                }
+                return hotList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<FindCategoryInfo> decodeCategory(JSONObject jsonObject) {
+        categoryList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray category = datas.getJSONArray("tag_scenic");
+                for (int i = 0; i < category.length(); i++) {
+                    JSONObject item = category.getJSONObject(i);
+                    FindCategoryInfo categoryInfo = new FindCategoryInfo();
+                    categoryInfo.setIs_new(item.getString("is_new"));
+                    categoryInfo.setSub_id(item.getString("sub_id"));
+                    categoryInfo.setSub_img(item.getString("sub_img"));
+                    categoryInfo.setSub_name(item.getString("sub_name"));
+                    categoryList.add(categoryInfo);
+                }
+                return categoryList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<FindJustGoInfo> decodeJustGo(JSONObject jsonObject){
+        justGoList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray category = datas.getJSONArray("went_scenic");
+                for (int i = 0; i < category.length(); i++) {
+                    JSONObject item = category.getJSONObject(i);
+                    FindJustGoInfo justGoInfo = new FindJustGoInfo();
+                    justGoInfo.setScenic_name(item.getString("scenic_name"));
+                    justGoInfo.setScenic_img(item.getString("scenic_img"));
+                    justGoList.add(justGoInfo);
+                }
+                return justGoList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<JourneyItemInfo> decodeJourneyItem(JSONObject jsonObject,String arrayName) {
+        journeyItemList = new ArrayList<>();
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject datas = jsonObject.getJSONObject("data");
+                JSONArray list = datas.getJSONArray(arrayName);
+                for (int i = 0; i < list.length(); i++) {
+                    JourneyItemInfo itemInfo = new JourneyItemInfo();
+                    JSONObject listItem = list.getJSONObject(i);
+                    itemInfo.setUsername(listItem.getString("username"));
+                    itemInfo.setGender(listItem.getString("gender"));
+                    itemInfo.setContent(listItem.getString("content"));
+                    itemInfo.setTime(listItem.getString("time"));
+                    itemInfo.setPic_cnt(listItem.getString("pic_cnt"));
+                    itemInfo.setLike_cnt(listItem.getString("like_cnt"));
+                    itemInfo.setAddress(listItem.getString("address"));
+                    itemInfo.setAvatar(listItem.getString("avatar"));
+                    List<String> imgList = new ArrayList<>();
+                    JSONArray pic = listItem.getJSONArray("pics");
+                    for (int i1 = 0; i1 < pic.length(); i1++) {
+                        JSONObject picItem = pic.getJSONObject(i1);
+                        imgList.add(picItem.getString("pic_url"));
+                    }
+                    itemInfo.setPictureList(imgList);
+                    List<TagInfo> tagList = new ArrayList<>();
+                    JSONArray tag = listItem.getJSONArray("tag");
+                    for (int i1 = 0; i1 < tag.length(); i1++) {
+                        JSONObject tagItem = tag.getJSONObject(i1);
+                        TagInfo tagInfo = new TagInfo();
+                        tagInfo.setTag_name(tagItem.getString("tag_name"));
+                        tagList.add(tagInfo);
+                    }
+                    itemInfo.setTagList(tagList);
+                    itemInfo.setShare_url(listItem.getString("share_url"));
+                    if (!listItem.isNull("trip")) {
+                         JSONObject trip = listItem.getJSONObject("trip");
+                         itemInfo.setTrip_name(trip.getString("trip_name"));
+                    }
+
+                     journeyItemList.add(itemInfo);
+                }
+                return journeyItemList;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public HotDetailTopInfo decodeHotTop(JSONObject jsonObject){
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject data = jsonObject.getJSONObject("data");
+                JSONObject info = data.getJSONObject("info");
+                HotDetailTopInfo hotTopInfo = new HotDetailTopInfo();
+                hotTopInfo.setHuati_title(info.getString("huati_title"));
+                hotTopInfo.setHuati_summary(info.getString("huati_summary"));
+                hotTopInfo.setHuati_summary_html(info.getString("huati_summary_html"));
+                hotTopInfo.setHuati_img(info.getString("huati_img"));
+                hotTopInfo.setRecord_cnt(info.getString("record_cnt"));
+                hotTopInfo.setView_cnt(info.getString("view_cnt"));
+                hotTopInfo.setUsername(info.getString("username"));
+                hotTopInfo.setShare_url(info.getString("share_url"));
+                hotTopInfo.setShare_message(info.getString("share_message"));
+                return hotTopInfo;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public MostInfo decodeMost(JSONObject jsonObject) {
+        Log.i("kong",jsonObject.toString());
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if (result.getInt("result_code") == 1) {
+
+                JSONObject data = jsonObject.getJSONObject("data");
+                MostInfo mostInfo = new MostInfo();
+
+                mostInfo.setSub_name(data.getString("sub_name"));
+                mostInfo.setSub_img(data.getString("sub_img"));
+                mostInfo.setSub_new_img(data.getString("sub_new_img"));
+                mostInfo.setSub_desc(data.getString("sub_desc"));
+                mostInfo.setSub_new_desc(data.getString("sub_new_desc"));
+                mostInfo.setSub_share_url(data.getString("sub_share_url"));
+                mostInfo.setShare_message(data.getString("share_message"));
+
+                JSONArray data_list = data.getJSONArray("data_list");
+                List<MostDataInfo> dataInfos = new ArrayList<>();
+                int dataLength = data_list.length();
+                for (int i = 0; i < dataLength; i++) {
+                    JSONObject innerData = data_list.getJSONObject(i);
+                    MostDataInfo mostDataInfo = new MostDataInfo();
+                    mostDataInfo.setData_name(innerData.getString("data_name"));
+                    mostDataInfo.setData_addr(innerData.getString("data_addr"));
+                    mostDataInfo.setData_img(innerData.getString("data_img"));
+                    mostDataInfo.setBest_month(innerData.getString("best_month"));
+                    mostDataInfo.setDesc(innerData.getString("desc"));
+                    mostDataInfo.setData_share_url(innerData.getString("data_share_url"));
+                    mostDataInfo.setShare_message(innerData.getString("share_message"));
+                    mostDataInfo.setRank(innerData.getString("rank"));
+                    List<String> imgList = new ArrayList<>();
+                    JSONArray pics = innerData.getJSONArray("pics");
+                    int picLength = pics.length();
+                    for (int i1 = 0; i1 < picLength; i1++) {
+                        imgList.add(pics.getJSONObject(i1).getString("pic_url"));
+                    }
+                    mostDataInfo.setPics(imgList);
+                    dataInfos.add(mostDataInfo);
+                }
+                mostInfo.setMostDataInfoList(dataInfos);
+                return mostInfo;
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+}
+
+

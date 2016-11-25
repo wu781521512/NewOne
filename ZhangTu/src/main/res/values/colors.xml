@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="qianhui">#CACACA</color>
+    <color name="main_color">#0CB6AC</color>
+    <color name="find_bg">#D8D5DC</color>
+    <color name="find_black">#626363</color>
+    <color name="find_hui">#A9A9AA</color>
+    <color name="feng_huang">#F48E33</color>
+    <color name="find_white">#FFFFFF</color>
+    <color name="journey_lv">#0CB69C</color>
+    <color name="journey_black">#838181</color>
+    <color name="qinhui">#F5F3F3</color>
+    <color name="touming">#00000000</color>
+    <color name="mine_black">#000000</color>
+</resources>

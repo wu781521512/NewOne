@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/find_white"
+              android:orientation="vertical"
+              android:descendantFocusability="afterDescendants"
+    >
+    <LinearLayout
+        android:id="@+id/journey_top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <com.example.mrwuchao.newone.views.CircleView
+                android:id="@+id/journey_touxiang"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:id="@+id/journey_sex"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignBottom="@id/journey_touxiang"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="-12dp"
+                android:layout_toRightOf="@id/journey_touxiang"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_man"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/journey_touxiang"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/journey_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="hdfhsdfsd"
+                    android:textColor="@color/journey_black"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/journey_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2小时前发送"
+                    android:textSize="10sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/journey_attention"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/icon_guanzhu"/>
+        </RelativeLayout>
+        <com.example.mrwuchao.newone.views.MyRecyclerView
+            android:id="@+id/journey_inner_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </com.example.mrwuchao.newone.views.MyRecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/journey_pinlun_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/journey_location"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:drawablePadding="4dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:drawableLeft="@mipmap/image_scenicdetail_address"
+            android:gravity="center_vertical"
+            android:text="石家庄"
+            android:textSize="12sp"
+
+            />
+
+        <TextView
+            android:id="@+id/journey_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/journey_black"
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:focusableInTouchMode="true"/>
+
+        <LinearLayout
+            android:id="@+id/journey_from_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/qinhui"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/setting_trip"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="6dp"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/qianhui"/>
+
+            <TextView
+                android:id="@+id/journey_from_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="来自什么的形成"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/journey_tag_linear"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/qinhui"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/journey_zan_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/journey_zan"
+            android:paddingLeft="30dp"
+            android:text="4"
+            android:textColor="@color/qianhui"/>
+
+        <TextView
+            android:id="@+id/journey_liuyan_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_comment"
+            android:paddingLeft="32dp"/>
+
+        <TextView
+            android:id="@+id/journey_share_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_share"
+            android:paddingLeft="32dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text=". . ."
+            android:textColor="@color/qianhui"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+</LinearLayout>

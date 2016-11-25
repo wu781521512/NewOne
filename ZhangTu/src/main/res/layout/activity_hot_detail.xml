@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qinhui"
+    android:orientation="vertical"
+    tools:context="com.example.mrwuchao.newone.activity.HotDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/journey_lv">
+
+        <ImageView
+            android:id="@+id/hot_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="话题详情"
+            android:textColor="@color/find_white"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/hot_detail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70dp"
+            android:src="@mipmap/image_theme_share"/>
+
+        <CheckBox
+            android:id="@+id/hot_detail_shoucang"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/hot_detail_shou"
+            android:button="@null"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.mrwuchao.newone.views.HotDetailScrollView
+            android:id="@+id/hot_detail_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hot_detail_top_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/find_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp">
+
+                        <ImageView
+                            android:id="@+id/hot_detail_top_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:id="@+id/hot_detail_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="70dp"
+                            android:text="#雪的味道#"
+                            android:textColor="@color/find_white"
+                            android:textSize="28sp"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/hot_detail_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hot_detail_title"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/hot_detail_canyu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="参与(31)"
+                                android:textColor="@color/find_white"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:background="@color/find_white"/>
+
+                            <TextView
+                                android:id="@+id/hot_detail_liulan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="浏览(31)"
+                                android:textColor="@color/find_white"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/hot_detail_faqi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hot_detail_record"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:text="发起人：张图小秘书"
+                            android:textColor="@color/find_white"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/find_white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hot_detail_summary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:padding="10dp"
+                            android:text="我是一直狭小if哦圣诞节但是发生的发生的发生的发生的发生的发生的发生的发生的发生的发生的发生的发生的方式发生发生的发生的发生的防守打法佛教史东方军事豆浆粉开始的浪费了时间到了放假了是的"/>
+
+                        <CheckBox
+                            android:id="@+id/hot_detail_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/hot_more_detail"
+                            android:button="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hot_bottom_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/find_white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/hot_detail_zuixin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hot_detail_zuixin_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="最新"
+                            android:textColor="@color/journey_lv"
+                            android:textSize="18sp"/>
+
+                        <View
+                            android:id="@+id/hot_detail_zuixin_view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/journey_lv"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/hot_detail_zuire"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hot_detail_zuire_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="最热"
+                            android:textColor="@color/find_black"
+                            android:textSize="18sp"/>
+
+                        <View
+                            android:id="@+id/hot_detail_zuixin_view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/journey_lv"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hot_detail_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/hot_detail_new_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/hot_detail_hot_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </com.example.mrwuchao.newone.views.HotDetailScrollView>
+
+        <LinearLayout
+            android:id="@+id/hot_bottom_linear2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/find_white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/hot_detail_zuixin2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hot_detail_zuixin_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="最新"
+                    android:textColor="@color/journey_lv"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:id="@+id/hot_detail_zuixin_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/journey_lv"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hot_detail_zuire2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hot_detail_zuire_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="最热"
+                    android:textColor="@color/find_black"
+                    android:textSize="18sp"/>
+
+                <View
+                    android:id="@+id/hot_detail_zuixin_view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/journey_lv"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

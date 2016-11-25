@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+              android:orientation="vertical"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/feng_image"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="#ff0000"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="2dp"
+            android:background="@mipmap/bk_rank_top"
+            android:layout_marginBottom="75dp"/>
+        <TextView
+            android:id="@+id/feng_no_text"
+            android:layout_width="50dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/find_white"
+            android:background="@mipmap/bk_rank_bottom"/>
+
+    </RelativeLayout>
+    <com.example.mrwuchao.newone.views.CenterTextView
+        android:id="@+id/feng_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/feng_image"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:maxEms="7"
+        android:textSize="12sp"
+        />
+</LinearLayout>

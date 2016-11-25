@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qinhui"
+    tools:context="com.example.mrwuchao.newone.activity.MostActivity">
+    <RelativeLayout
+        android:id="@+id/most_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/journey_lv">
+
+        <ImageButton
+            android:id="@+id/most_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/touming"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="主题详情"
+            android:textColor="@color/find_white"
+            android:textSize="26sp"/>
+
+        <ImageView
+            android:id="@+id/most_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/image_theme_share"
+            />
+
+        <ImageView
+            android:id="@+id/most_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:padding="14dp"
+            android:src="@mipmap/icon_map"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/most_all_linear"
+        android:layout_below="@id/most_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/qianhui">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/most_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.mrwuchao.newone.views.MostScrollView
+                android:id="@+id/most_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="afterDescendants">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/most_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="afterDescendants">
+
+                        <ImageView
+                            android:id="@+id/most_top_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:background="#ff00ff"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/ic_launcher"/>
+
+                        <ImageView
+                            android:id="@+id/most_top_tip_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@mipmap/ic_subject_details_des"/>
+                        <TextView
+                            android:id="@+id/most_big_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/find_white"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/most_middle_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/most_title"
+                        android:background="@color/find_white"
+                        android:orientation="horizontal"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/most_middle_select_pin"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/most_middle_select_pin_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="按评分"
+                                android:textColor="@color/journey_lv"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:id="@+id/most_middle_select_top_pin_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/journey_lv"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/most_middle_select_juli"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/most_middle_select_juli_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="按距离"
+                                android:textColor="@color/find_black"
+                                android:textSize="16sp"/>
+
+                            <View
+                                android:id="@+id/most_middle_select_juli_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/journey_lv"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <com.example.mrwuchao.newone.views.MostRecycler
+                        android:id="@+id/most_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.example.mrwuchao.newone.views.MostRecycler>
+                </LinearLayout>
+            </com.example.mrwuchao.newone.views.MostScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/most_top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/most_title"
+        android:background="@color/find_white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:id="@+id/most_top_select_pin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/most_top_select_pin_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="按评分"
+                android:textColor="@color/journey_lv"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/most_top_select_top_pin_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/journey_lv"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/most_top_select_juli"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/most_top_select_juli_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="按距离"
+                android:textColor="@color/find_black"
+                android:textSize="16sp"/>
+
+            <View
+                android:id="@+id/most_top_select_juli_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/journey_lv"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="400dp">
+    <TextView
+        android:id="@+id/most_dialog_discuss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="×"
+        android:padding="10dp"
+        android:textColor="@color/qianhui"
+        android:textSize="26sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/most_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/find_black"
+        android:text="这个秋天真的是当减肥啦就是电缆附件卡桑德拉减肥啦手机都快放假啊收到了减肥"
+        android:textSize="18sp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"/>
+</RelativeLayout>
