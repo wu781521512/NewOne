@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/find_white"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/most_detail_jiesao_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_intro"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="景区介绍"/>
+
+        <TextView
+            android:id="@+id/most_detail_jiesao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:text="福建省电缆附件老师的解放路世界的看法就是看得见风口浪尖水电开发连锁酒店看"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:src="@mipmap/setting_arrow_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_dizhi_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_address"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="景区地址"/>
+
+        <TextView
+            android:id="@+id/most_detail_dizhi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:text="福建省电缆附件老师的解放路世界的看法就是看得见风口浪尖水电开发连锁酒店看"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:src="@mipmap/setting_arrow_right"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_open_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_time"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="营业时间"/>
+
+        <TextView
+            android:id="@+id/most_detail_open"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:text="福建省电缆附件老师的解放路世界的看法就是看得见风口浪尖水电开发连锁酒店看"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_price_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_price"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="门票价格"/>
+
+        <TextView
+            android:id="@+id/most_detail_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_jianyi_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_costtime"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="建议游览时间"/>
+
+        <TextView
+            android:id="@+id/most_detail_jianyi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_dianhua_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_tel"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="景区电话"/>
+
+        <TextView
+            android:id="@+id/most_detail_dianhua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/text_blue"
+            android:layout_gravity="center_vertical"
+            android:text="福建省电缆附件老师的解放路世界的看法就是看得见风口浪尖水电开发连锁酒店看"/>
+    </LinearLayout>
+
+    <include layout="@layout/most_detail_view"/>
+
+    <LinearLayout
+        android:id="@+id/most_detail_zuijia_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:background="@color/find_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/image_scenicdetail_bestmonth"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="最佳游览时间 :"/>
+
+        <TextView
+            android:id="@+id/most_detail_zuijia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_gravity="center_vertical"
+            android:text="福建省电缆附件老师的解放路世界的看法就是看得见风口浪尖水电开发连锁酒店看"/>
+    </LinearLayout>
+</LinearLayout>

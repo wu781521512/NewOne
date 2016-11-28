@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/qinhui"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/find_white">
+
+        <ImageView
+            android:id="@+id/most_detail_scroll_top_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/most_detail_type_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/most_detail_scroll_top_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-20dp"
+            android:src="@mipmap/default_tag"
+            android:scaleType="fitXY"
+            android:background="@drawable/circlebg"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/find_white">
+        <TextView
+            android:id="@+id/most_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="九寨沟风机房可视对讲"
+            android:textColor="@color/text_black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/most_detail_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="本月在分手了就分开时间都浪费"
+            android:textSize="16sp"/>
+
+        <RatingBar
+            android:id="@+id/most_detail_ratting_bar"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2.5"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/most_detail_tuijian_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/most_detail_recommend_check"
+                android:gravity="center"
+                android:text="推荐"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"
+                />
+
+            <CheckBox
+                android:id="@+id/most_detail_shouchang_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/most_detail_shouchang_check"
+                android:gravity="center"
+                android:text="收藏"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"
+                />
+
+            <CheckBox
+                android:id="@+id/most_detail_share_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/most_detail_share_check"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/most_detail_info"/>
+    <include layout="@layout/most_detail_biaoqian"/>
+    <include layout="@layout/most_detail_recommend"/>
+    <include layout="@layout/most_detail_real"/>
+    <include layout="@layout/most_detail_dianping"/>
+</LinearLayout>
