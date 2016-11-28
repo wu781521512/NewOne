@@ -19,7 +19,8 @@ public class MyLiuViewGroup extends ViewGroup{
     int heightMeasure;
     int newMaxWidth;
     int currentWidth = 0;
-    int newWidth;
+    private int marLeft;
+    private int marTop;
     public MyLiuViewGroup(Context context) {
         super(context);
     }
@@ -34,8 +35,21 @@ public class MyLiuViewGroup extends ViewGroup{
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         measureChildren(widthMeasureSpec,heightMeasureSpec);
         heightMeasure = heightMeasureSpec;
-//        Log.i("hori","自定义的宽"+getMeasuredWidth());
-
+        widthList.clear();
+        int childCount = getChildCount();
+        for (int i = 0; i < getChildCount(); i++) {
+            View view = getChildAt(i);
+            int left = (int) (Math.random()* (getResources().getDisplayMetrics().widthPixels*2));
+            int top = (int) (Math.random()*(getHeight()-100));
+            widthList.add(left);
+            widthList.add(top);
+            Log.i("view","view的宽度"+view.getMeasuredWidth());
+            int right = left+view.getMeasuredWidth();
+            int bottom = top+view.getMeasuredHeight();
+            newMaxWidth = Math.max(currentWidth,right);
+            currentWidth = right;
+        }
+        setMeasuredDimension(newMaxWidth+20,heightMeasureSpec);
     }
 
     @Override
@@ -44,17 +58,9 @@ public class MyLiuViewGroup extends ViewGroup{
 
         for (int i = 0; i < childCount; i++) {
             View view = getChildAt(i);
-            int left = (int) (Math.random()* (getResources().getDisplayMetrics().widthPixels+100));
-            int top = (int) (Math.random()*(getHeight()-100));
-            Log.i("position","左边"+left);
-            Log.i("position","上方"+top+"   子View宽高" + view.getMeasuredWidth()+"  "+view.getMeasuredHeight());
-            int right = left+view.getMeasuredWidth();
-            int bottom = top+view.getMeasuredHeight();
-            view.layout(left,top,right,bottom);
-            newMaxWidth = Math.max(currentWidth,right);
-            currentWidth = right;
+            int right = widthList.get(i*2)+view.getMeasuredWidth();
+            int bottom = widthList.get(i*2+1)+view.getMeasuredHeight();
+            view.layout(widthList.get(i*2),widthList.get(i*2+1),right,bottom);
         }
-        newWidth = newMaxWidth;
-        setMeasuredDimension(newWidth,heightMeasure);
     }
 }

@@ -15,11 +15,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <ImageView
                     android:id="@+id/mine_bk"
                     android:layout_width="match_parent"
-                    android:layout_height="260dp"
+                    android:layout_height="250dp"
                     android:scaleType="centerCrop"
                     android:src="@mipmap/default_theme_image_bk"/>
 
@@ -41,6 +40,7 @@
                     android:src="@mipmap/icon_personal_login_default"/>
 
                 <TextView
+                    android:id="@+id/mine_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/mine_touxiang"
@@ -48,17 +48,18 @@
                     android:layout_marginTop="20dp"
                     android:text="帅哥一号"
                     android:textColor="@color/find_white"
+                    android:visibility="gone"
                     android:textSize="16sp"
                     />
 
                 <Button
                     android:id="@+id/mine_login_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
                     android:layout_below="@id/mine_touxiang"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/mine_login"
+                    android:background="@mipmap/icon_personal_login_bk"
                     android:text="登录"
                     android:textColor="@color/find_white"/>
             </RelativeLayout>
@@ -188,6 +189,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/mine_dianpin_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="10dp"
@@ -202,6 +204,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_daidian_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="1dp"
@@ -216,6 +219,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_jilu_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="10dp"
@@ -230,6 +234,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_xingcheng_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="1dp"
@@ -244,6 +249,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_shoucang_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="1dp"
@@ -258,6 +264,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_share_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="10dp"
@@ -272,6 +279,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_renzheng_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="10dp"
@@ -286,6 +294,7 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/mine_setting_text"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="1dp"

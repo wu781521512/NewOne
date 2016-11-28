@@ -1,19 +1,25 @@
 package com.example.mrwuchao.newone.activity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -218,21 +224,19 @@ public class MostActivity extends NotitleActivity {
     }
 
     private void shareTip() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        final AlertDialog alertDialog = builder.create();
         View view = View.inflate(this, R.layout.most_dialog, null);
+        final PopupWindow popupWindow = new PopupWindow(view,getResources().getDisplayMetrics().widthPixels,1000);
         TextView discuss = (TextView) view.findViewById(R.id.most_dialog_discuss);
         discuss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alertDialog.dismiss();
+                popupWindow.dismiss();
             }
         });
         TextView content = (TextView) view.findViewById(R.id.most_dialog_text);
         content.setText(mostInfo.getSub_desc());
         content.setMovementMethod(ScrollingMovementMethod.getInstance());
-        alertDialog.setView(view);
-        alertDialog.show();
+        popupWindow.showAtLocation(topTipImage,Gravity.BOTTOM,0,0);
     }
 
 

@@ -89,12 +89,13 @@
 
                         <ImageView
                             android:id="@+id/most_top_tip_image"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="10dp"
-                            android:paddingBottom="10dp"
+                            android:padding="4dp"
+                            android:layout_marginBottom="10dp"
                             android:src="@mipmap/ic_subject_details_des"/>
                         <TextView
                             android:id="@+id/most_big_name"

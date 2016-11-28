@@ -8,7 +8,7 @@ public class HttpUrl {
     /**
      * 基础访问路径
      **/
-    public static final String BASE = "http://192.168.56.1:8080/wuchao/";
+    public static final String BASE = "http://192.168.1.162:8080/wuchao/";
     /**
      * 发现页面的访问路径
      **/
