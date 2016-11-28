@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/find_white">
+        android:background="@color/find_white"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="0dp"

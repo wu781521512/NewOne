@@ -10,7 +10,12 @@ import com.example.mrwuchao.newone.entity.FindJustGoInfo;
 import com.example.mrwuchao.newone.entity.HotDetailTopInfo;
 import com.example.mrwuchao.newone.entity.JourneyItemInfo;
 import com.example.mrwuchao.newone.entity.MostDataInfo;
+import com.example.mrwuchao.newone.entity.MostDetailInfo;
+import com.example.mrwuchao.newone.entity.MostDetailTags;
 import com.example.mrwuchao.newone.entity.MostInfo;
+import com.example.mrwuchao.newone.entity.RealPics;
+import com.example.mrwuchao.newone.entity.Recommend;
+import com.example.mrwuchao.newone.entity.Score;
 import com.example.mrwuchao.newone.entity.TagInfo;
 
 import org.json.JSONArray;
@@ -322,7 +327,84 @@ public class JsonUtil {
         return null;
     }
 
+    public MostDetailInfo decodeMostDetail(JSONObject jsonObject){
+        JSONObject result = null;
+        try {
+            result = jsonObject.getJSONObject("result");
 
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (result.getInt("result_code") == 1) {
+                JSONObject data = jsonObject.getJSONObject("data");
+                JSONObject info = data.getJSONObject("scenic_info");
+                MostDetailInfo detailInfo = new MostDetailInfo();
+                detailInfo.setScenic_name(info.getString("scenic_name"));
+                detailInfo.setScenic_addr(info.getString("scenic_addr"));
+                detailInfo.setScenic_region(info.getString("scenic_region"));
+                detailInfo.setScenic_tel(info.getString("scenic_tel"));
+                detailInfo.setScenic_ticket(info.getString("scenic_ticket"));
+                detailInfo.setScenic_opentime(info.getString("scenic_opentime"));
+                detailInfo.setScenic_duration(info.getString("scenic_duration"));
+                detailInfo.setScenic_desc(info.getString("scenic_desc"));
+                detailInfo.setScenic_img(info.getString("scenic_img"));
+                detailInfo.setScenic_star_dec(info.getInt("scenic_star_dec"));
+                detailInfo.setScenic_best_month(info.getString("scenic_best_month"));
+                detailInfo.setScenic_share_url(info.getString("scenic_share_url"));
+                detailInfo.setShare_message(info.getString("share_message"));
+                List<MostDetailTags> tagsList = new ArrayList<>();
+                JSONArray tags = info.getJSONArray("tags");
+                int tagCount = tags.length();
+                for (int i = 0; i < tagCount; i++) {
+                    JSONObject tag = tags.getJSONObject(i);
+                    MostDetailTags detailTag = new MostDetailTags();
+                    detailTag.setTag_name(tag.getString("tag_name"));
+                    tagsList.add(detailTag);
+                }
+                detailInfo.setTagsList(tagsList);
+                Score scenic_score = new Score();
+                JSONObject sceScore = info.getJSONObject("scenic_score");
+                scenic_score.setOption1(sceScore.getString("option1"));
+                scenic_score.setOption2(sceScore.getString("option2"));
+                scenic_score.setOption3(sceScore.getString("option3"));
+                scenic_score.setOption4(sceScore.getString("option4"));
+                scenic_score.setOption5(sceScore.getString("option5"));
+                scenic_score.setTotal(sceScore.getString("total"));
+                detailInfo.setScenic_score(scenic_score);
+                detailInfo.setRank(info.getString("rank"));
+                List<RealPics> realList = new ArrayList<>();
+                JSONArray real = data.getJSONArray("pics");
+                int realCount = real.length();
+                for (int i = 0; i < realCount; i++) {
+                    RealPics realPics = new RealPics();
+                    JSONObject realOb = real.getJSONObject(i);
+                    realPics.setPic_url(realOb.getString("pic_url"));
+                    realPics.setAvatar(realOb.getString("avatar"));
+                    realPics.setGender(realOb.getString("gender"));
+                    realPics.setProvider(realOb.getString("provider"));
+                    realList.add(realPics);
+                }
+                detailInfo.setRealList(realList);
+                List<Recommend> recomList = new ArrayList<>();
+                JSONArray poiRecom = data.getJSONArray("poi_recomm");
+                int poiCount = poiRecom.length();
+                for (int i = 0; i < poiCount; i++) {
+                    JSONObject recomOb = poiRecom.getJSONObject(i);
+                    Recommend recommend = new Recommend();
+                    recommend.setPoi_name(recomOb.getString("poi_name"));
+                    recommend.setPoi_img(recomOb.getString("poi_img"));
+                    recommend.setPoi_addr(recomOb.getString("poi_addr"));
+                    recomList.add(recommend);
+                }
+                detailInfo.setRecomList(recomList);
+                return detailInfo;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
 
 
