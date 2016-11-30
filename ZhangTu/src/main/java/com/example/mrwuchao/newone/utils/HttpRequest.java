@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * Http请求类
  */
 public class HttpRequest {
     Context context;

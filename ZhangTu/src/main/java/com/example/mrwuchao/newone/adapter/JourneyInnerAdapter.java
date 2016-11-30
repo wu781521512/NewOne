@@ -2,14 +2,10 @@ package com.example.mrwuchao.newone.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
 
@@ -22,7 +18,6 @@ import java.util.List;
 public class JourneyInnerAdapter extends RecyclerView.Adapter<JourneyInnerAdapter.MyHolder> {
     Context context;
     List<String> imgList;
-    private View view;
 
     public JourneyInnerAdapter(Context context, List<String> imgList) {
         this.context = context;
@@ -31,9 +26,7 @@ public class JourneyInnerAdapter extends RecyclerView.Adapter<JourneyInnerAdapte
 
     @Override
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        view = null;
-
-        view = LayoutInflater.from(context).inflate(R.layout.journey_inner_item_view, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.journey_inner_item_view, parent, false);
         MyHolder myHolder = new MyHolder(view);
 //        switch (viewType) {
 //            case 0:

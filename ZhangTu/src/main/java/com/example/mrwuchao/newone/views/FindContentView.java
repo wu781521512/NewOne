@@ -1,6 +1,5 @@
 package com.example.mrwuchao.newone.views;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -8,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.example.mrwuchao.newone.R;

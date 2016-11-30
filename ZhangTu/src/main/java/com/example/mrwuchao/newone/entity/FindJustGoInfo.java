@@ -1,29 +1,11 @@
 package com.example.mrwuchao.newone.entity;
 
-import java.util.List;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 发现界面小伙伴刚去过部分的数据实体
  */
 public class FindJustGoInfo {
 
-    /**
-     * scenic_id : 414
-     * scenic_name : 白瀑寺
-     * scenic_type : 5
-     * scenic_addr : 北京市 · 门头沟区
-     * scenic_province : 110000
-     * scenic_lat : 40.117755
-     * scenic_lng : 115.921007
-     * scenic_img : http://img01.zhangtu.com/pic/201608/28/57c2d0a690a310x02498407_1252.jpg
-     * scenic_star : 42.60
-     * scenic_star_dec : 4
-     * scenic_best_month : 四季皆宜
-     * allow_nav : 1
-     * share_message : 来掌途，一起去「白瀑寺」玩耍！
-     * rank : <font color='#9fa0a0'>北京市所有景区中排第</font><font color='#f48e33'> 166 </font><font color='#9fa0a0'>名</font>
-     * pics : [{"pic_id":"133209","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c9bd3be3o42689765.jpg"},{"pic_id":"133208","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c9132971622791760_t.jpg"},{"pic_id":"133207","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c8b6b9f5s64600264.jpg"},{"pic_id":"133206","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c8655e89o49071842.jpg"},{"pic_id":"133205","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c75e4f23h21558520_t.jpg"},{"pic_id":"133204","pic_url":"http://img01.zhangtu.com/pic/201611/13/582861c7046560b92463186.jpg"}]
-     */
 
     private String scenic_id;
     private String scenic_name;

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.view.View;
 
 import com.example.mrwuchao.newone.activity.WebActivity;

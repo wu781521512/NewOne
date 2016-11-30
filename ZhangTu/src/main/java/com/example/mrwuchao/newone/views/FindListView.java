@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 忘了
  */
 public class FindListView extends ListView{
     public FindListView(Context context) {

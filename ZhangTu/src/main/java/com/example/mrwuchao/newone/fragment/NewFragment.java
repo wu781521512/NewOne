@@ -20,7 +20,6 @@ import com.example.mrwuchao.newone.utils.HttpRequest;
 import com.example.mrwuchao.newone.utils.HttpUrl;
 import com.example.mrwuchao.newone.utils.JsonUtil;
 import com.example.mrwuchao.newone.views.MyDecoration;
-import com.example.mrwuchao.newone.views.MyLinearManager;
 
 import org.json.JSONObject;
 

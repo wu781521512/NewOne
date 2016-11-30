@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.amap.api.maps2d.model.Text;
 import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.activity.MostDetailActivity;

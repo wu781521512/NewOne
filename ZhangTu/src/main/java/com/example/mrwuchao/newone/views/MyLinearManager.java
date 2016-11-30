@@ -84,7 +84,6 @@ public class MyLinearManager extends LinearLayoutManager {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
         }
     }
 }

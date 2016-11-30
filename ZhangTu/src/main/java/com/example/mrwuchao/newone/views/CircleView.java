@@ -9,22 +9,15 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
-import android.graphics.Xfermode;
-import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-
 import com.example.mrwuchao.newone.R;
-import com.example.mrwuchao.newone.utils.DensityUtil;
 
 /**
  * 各个浏览滑动的界面的用户圆形头像
  */
 public class CircleView extends View {
-    private Canvas mCanvas;
-    private Bitmap newBitmap;
     private Paint paint;
     private Paint mPaint;
     private Bitmap netBitmap;
@@ -57,14 +50,12 @@ public class CircleView extends View {
     }
 
     public Bitmap getCircle(){
-
+        Bitmap newBitmap = null;
         int width = getWidth();
         int height = getHeight();
-        float radis = width;
-        float radis2 = (float) (radis * 0.5);
-        Log.i("radis","设置的宽高" + height);
+        float radis2 = (float) (width * 0.5);
         Bitmap firstBitmap = Bitmap.createBitmap(width,height, Bitmap.Config.ARGB_4444);
-        mCanvas = new Canvas(firstBitmap);
+        Canvas mCanvas = new Canvas(firstBitmap);
         mCanvas.drawCircle(radis2,radis2,radis2,mPaint);
         Matrix matrix = new Matrix();
         float rateX = (float) 0.0;

@@ -1,7 +1,6 @@
 package com.example.mrwuchao.newone.activity;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
@@ -22,7 +20,6 @@ import com.example.mrwuchao.newone.adapter.RecomAdapter;
 import com.example.mrwuchao.newone.entity.MostDetailInfo;
 import com.example.mrwuchao.newone.entity.MostDetailTags;
 import com.example.mrwuchao.newone.entity.Score;
-import com.example.mrwuchao.newone.entity.TagInfo;
 import com.example.mrwuchao.newone.utils.DensityUtil;
 import com.example.mrwuchao.newone.utils.HandleUtil;
 import com.example.mrwuchao.newone.utils.HandlerBack;

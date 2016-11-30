@@ -9,13 +9,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
-import com.example.mrwuchao.newone.entity.FindCategoryInfo;
 import com.example.mrwuchao.newone.entity.FindJustGoInfo;
 
 import java.util.List;
 
 /**
- * Created by Mr.wuchao on 2016/11/15.
+ * 发现界面刚去过部分的适配器
  */
 public class JustGoAdapter extends RecyclerView.Adapter<JustGoAdapter.MyHolder> {
 

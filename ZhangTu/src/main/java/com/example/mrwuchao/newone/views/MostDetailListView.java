@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ListView;
 
-import java.util.List;
 
 /**
  * most详情页面的景区具体信息的listView

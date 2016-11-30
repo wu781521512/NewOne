@@ -18,7 +18,6 @@ import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.activity.WebActivity;
 import com.example.mrwuchao.newone.entity.Advertise;
-import com.example.mrwuchao.newone.utils.HttpUrl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +49,6 @@ public class AdvertiseView implements ViewPager.OnPageChangeListener {
                 viewPager.setCurrentItem(currentNum);
                 changeDot(currentNum % viewList.size());
             }
-            Log.i("lunbo","轮播进行" + currentNum);
             return true;
         }
     });

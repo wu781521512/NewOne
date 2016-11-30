@@ -1,19 +1,9 @@
 package com.example.mrwuchao.newone.entity;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 广告轮播的数据实体
  */
 public class Advertise {
-
-    /**
-     * focus_title : 秋意浓红叶红
-     * focus_type : 4
-     * focus_sid :
-     * focus_aid :
-     * focus_img1 : http://img01.zhangtu.com/pic/201610/13/57feff51b4a2d5b35758969.jpg
-     * focus_url : http://www.zhangtu.com/m/share/redleaf
-     * open_type : 0
-     */
 
     private String focus_title;
     private String focus_type;

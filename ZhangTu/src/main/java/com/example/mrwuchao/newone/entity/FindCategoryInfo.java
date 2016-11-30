@@ -1,7 +1,7 @@
 package com.example.mrwuchao.newone.entity;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 发现页面的分类部分的数据实体
  */
 public class FindCategoryInfo {
 

@@ -1,7 +1,7 @@
 package com.example.mrwuchao.newone.entity;
 
 /**
- * Created by Mr.wuchao on 2016/11/27.
+ * 分类界面的详情页面的标签数据实体
  */
 public class MostDetailTags {
     public String getTag_name() {

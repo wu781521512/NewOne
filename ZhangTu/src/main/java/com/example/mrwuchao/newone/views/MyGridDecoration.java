@@ -2,7 +2,6 @@ package com.example.mrwuchao.newone.views;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 /**

@@ -3,7 +3,6 @@ package com.example.mrwuchao.newone.fragment;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,37 +15,23 @@ import android.widget.ImageView;
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.adapter.MyPagerAdapter;
 import com.example.mrwuchao.newone.utils.DensityUtil;
-import com.example.mrwuchao.newone.utils.HandleUtil;
-import com.example.mrwuchao.newone.utils.HandlerBack;
-import com.example.mrwuchao.newone.utils.HttpRequest;
-import com.example.mrwuchao.newone.utils.HttpUrl;
-import com.example.mrwuchao.newone.utils.JsonUtil;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.TriangularPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.WrapPagerIndicator;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
-
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 新鲜页面的fragment
  */
 public class JourneyFragment extends Fragment {
     private View view;
-    private ImageView camera;
     private MagicIndicator magic;
     private ViewPager viewPager;
     List<Fragment> fragmentList;
@@ -111,7 +96,7 @@ public class JourneyFragment extends Fragment {
     }
 
     private void initView() {
-        camera = (ImageView) view.findViewById(R.id.journey_camera);
+        ImageView camera = (ImageView) view.findViewById(R.id.journey_camera);
         magic = (MagicIndicator) view.findViewById(R.id.journey_magic);
         viewPager = (ViewPager) view.findViewById(R.id.journey_view_pager);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

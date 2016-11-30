@@ -2,7 +2,6 @@ package com.example.mrwuchao.newone.views;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.renderscript.Sampler;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;

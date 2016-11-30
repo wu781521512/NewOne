@@ -2,11 +2,10 @@ package com.example.mrwuchao.newone.views;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 /**
- * Created by Mr.wuchao on 2016/11/15.
+ * 线性的recyclerView的分隔线
  */
 public class MyDecoration extends RecyclerView.ItemDecoration {
     int mSpace;      //间隔距离

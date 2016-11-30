@@ -1,15 +1,9 @@
 package com.example.mrwuchao.newone.entity;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 发现界面话题部分的数据实体
  */
 public class FindHotInfo {
-
-    /**
-     * huati_id : 47
-     * huati_title : 红叶红
-     * huati_img : http://img01.zhangtu.com/pic/201610/13/57feffb647d889w54599793.jpeg
-     */
 
     private String huati_id;
     private String huati_title;

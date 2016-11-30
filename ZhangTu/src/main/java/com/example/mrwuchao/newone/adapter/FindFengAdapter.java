@@ -17,7 +17,7 @@ import com.example.mrwuchao.newone.entity.FindFengXiang;
 import java.util.List;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * 发现界面的风向标的适配器
  */
 public class FindFengAdapter extends RecyclerView.Adapter<FindFengAdapter.MyHolder>{
     Context context;

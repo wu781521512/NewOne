@@ -33,7 +33,6 @@ public class FindFragment extends Fragment {
                 contentView.refreshNow();
             }
         });
-        Log.i("scro",contentView + "      " + scollView);
         scollView.addView(contentView.getView());
         return view;
     }

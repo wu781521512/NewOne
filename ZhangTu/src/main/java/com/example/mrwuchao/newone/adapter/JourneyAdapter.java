@@ -3,13 +3,11 @@ package com.example.mrwuchao.newone.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
-import android.util.LruCache;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +21,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.activity.WebActivity;
 import com.example.mrwuchao.newone.entity.JourneyItemInfo;
-import com.example.mrwuchao.newone.utils.GlideCircleTranform;
 import com.example.mrwuchao.newone.utils.MoreClickableSpan;
 import com.example.mrwuchao.newone.utils.MyClickableSpan;
 import com.example.mrwuchao.newone.utils.TimeUtil;
@@ -37,7 +33,6 @@ import com.example.mrwuchao.newone.views.MyGridDecoration;
 import com.example.mrwuchao.newone.views.MyGridManager;
 import com.example.mrwuchao.newone.views.MyRecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,7 +42,7 @@ public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.MyHolder
     Context context;
     List<JourneyItemInfo> itemList;
     final int MAXTEXT = 160;   //最大文字显示数量
-    private View view;
+
 //    List<Bitmap> bitmapList = new ArrayList<>();
 //    LruCache<String,Bitmap> lru = new LruCache<String,Bitmap>((int) (Runtime.getRuntime().maxMemory()/8)) {
 //        @Override
@@ -64,7 +59,7 @@ public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.MyHolder
     @Override
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 //        View view = View.inflate(context, R.layout.journey_item_view,null);
-        view = LayoutInflater.from(context).inflate(R.layout.journey_item_view,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.journey_item_view,parent,false);
         MyHolder myHolder = new MyHolder(view);
         return myHolder;
     }

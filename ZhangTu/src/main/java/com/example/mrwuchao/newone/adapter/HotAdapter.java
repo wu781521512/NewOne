@@ -17,7 +17,7 @@ import com.example.mrwuchao.newone.entity.FindHotInfo;
 import java.util.List;
 
 /**
- * Created by Mr.wuchao on 2016/11/15.
+ * 发现界面话题部分的适配器
  */
 public class HotAdapter extends RecyclerView.Adapter<HotAdapter.MyHolder> {
 

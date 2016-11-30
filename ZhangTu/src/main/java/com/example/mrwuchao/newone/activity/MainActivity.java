@@ -1,5 +1,6 @@
 package com.example.mrwuchao.newone.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -56,6 +57,12 @@ public class MainActivity extends NotitleActivity implements RadioGroup.OnChecke
         if (checkedId != current) {
             change(checkedId);
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        change(R.id.mine_radio_button);
     }
 
     private void change(int id) {

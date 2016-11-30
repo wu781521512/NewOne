@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.activity.LoginActivity;
+import com.example.mrwuchao.newone.activity.SetActivity;
 import com.example.mrwuchao.newone.utils.SharedPUtil;
 import com.example.mrwuchao.newone.views.MineScrollView;
 
@@ -53,20 +54,27 @@ public class MineFragment extends Fragment implements ViewTreeObserver.OnGlobalL
     @BindView(R.id.mine_setting_text)
     TextView settingText;
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        SharedPUtil sharedPUtil = new SharedPUtil(getActivity());
+        String passWord = sharedPUtil.getPassWord();
+        if (!passWord.equals("")) {
+            mineName.setText(sharedPUtil.getUserName());
+            loginBtn.setVisibility(View.GONE);
+            mineName.setVisibility(View.VISIBLE);
+        }else{
+            mineName.setVisibility(View.GONE);
+            loginBtn.setVisibility(View.VISIBLE);
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mine_view, null);
         ButterKnife.bind(this, view);
         mineBk.getViewTreeObserver().addOnGlobalLayoutListener(this);
-        SharedPUtil sharedPUtil = new SharedPUtil(getActivity());
-        if (sharedPUtil.getPassWord().equals("")) {
-            mineName.setVisibility(View.GONE);
-            loginBtn.setVisibility(View.VISIBLE);
-        } else {
-            mineName.setVisibility(View.VISIBLE);
-            loginBtn.setVisibility(View.GONE);
-        }
         return view;
     }
 
@@ -111,6 +119,8 @@ public class MineFragment extends Fragment implements ViewTreeObserver.OnGlobalL
             case R.id.mine_renzheng_text:
                 break;
             case R.id.mine_setting_text:
+                Intent intent = new Intent(getActivity(),SetActivity.class);
+                startActivity(intent);
                 break;
         }
     }

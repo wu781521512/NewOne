@@ -15,7 +15,6 @@ import android.widget.TextView;
 public class CenterTextView extends TextView {
 
     private StaticLayout staticLayout;
-    private TextPaint tp;
     public CenterTextView(Context context) {
         super(context);
     }
@@ -31,7 +30,7 @@ public class CenterTextView extends TextView {
     }
 
     private void initView() {
-        tp = new TextPaint(Paint.ANTI_ALIAS_FLAG);
+        TextPaint tp = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         tp.setTextSize(getTextSize());
         tp.setColor(getCurrentTextColor());
         staticLayout = new StaticLayout(getText(),tp,getWidth(), Layout.Alignment.ALIGN_CENTER,1.0f,1.0f,false);

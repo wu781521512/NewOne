@@ -13,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.example.mrwuchao.newone.R;
 import com.example.mrwuchao.newone.activity.MostActivity;
 import com.example.mrwuchao.newone.entity.FindCategoryInfo;
-import com.example.mrwuchao.newone.entity.FindFengXiang;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.example.mrwuchao.newone.utils;
 
 /**
- * Created by Mr.wuchao on 2016/11/14.
+ * handler的返回的what的值
  */
 public class HandlerBack {
     //无网络handler返回
